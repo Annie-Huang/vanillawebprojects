@@ -1,0 +1,7 @@
+Build a Music Player | Vanilla JavaScript (https://www.youtube.com/watch?v=QTHRWGn_sJw)
+https://github.com/bradtraversy/vanillawebprojects
+https://github.com/Annie-Huang/vanillawebprojects
+
+The hangman project is in (C:\react\hangman-react git:https://github.com/Annie-Huang/hangman-react)
+--------------------------------------------------------------------
+
