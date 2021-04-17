@@ -71,6 +71,16 @@ function updateProgress(e) {
   progress.style.width = `${progressPercent}%`;
 }
 
+function setProgress(e) {
+  const width = this.clientWidth; // width of the progressbar.
+  // console.log(width);
+  const clickX = e.offsetX; // current X position related to the progressbar
+  // console.log(clickX);
+  const duration = audio.duration;
+
+  audio.currentTime = (clickX / width) * duration;
+}
+
 // Event listeners
 playBtn.addEventListener("click", () => {
   const isPlaying = musicContainer.classList.contains("play");
@@ -87,3 +97,5 @@ prevBtn.addEventListener("click", prevSong);
 nextBtn.addEventListener("click", nextSong);
 
 audio.addEventListener("timeupdate", updateProgress);
+
+progressContainer.addEventListener("click", setProgress);
