@@ -1,15 +1,15 @@
-const musicContainer = document.querySelector('.music-container');
-const playBtn = document.querySelector('#play');
-const prevBtn = document.querySelector('#prev');
-const nextBtn = document.querySelector('#next');
-const audio = document.querySelector('#audio');
-const progress = document.querySelector('.progress');
-const progressContainer = document.querySelector('.progress-container');
-const title = document.querySelector('#title');
-const cover = document.querySelector('#cover');
+const musicContainer = document.querySelector(".music-container");
+const playBtn = document.querySelector("#play");
+const prevBtn = document.querySelector("#prev");
+const nextBtn = document.querySelector("#next");
+const audio = document.querySelector("#audio");
+const progress = document.querySelector(".progress");
+const progressContainer = document.querySelector(".progress-container");
+const title = document.querySelector("#title");
+const cover = document.querySelector("#cover");
 
 // Song titles
-const songs = ['hey', 'summer', 'ukulele'];
+const songs = ["hey", "summer", "ukulele"];
 
 // Keep track of songs
 let songIndex = 2;
@@ -25,29 +25,28 @@ function loadSong(song) {
 }
 
 function playSong() {
-  musicContainer.classList.add('play');
-  playBtn.querySelector('i.fas').classList.remove('fa-play');
-  playBtn.querySelector('i.fas').classList.add('fa-pause');
+  musicContainer.classList.add("play");
+  playBtn.querySelector("i.fas").classList.remove("fa-play");
+  playBtn.querySelector("i.fas").classList.add("fa-pause");
 
   audio.play();
 }
 
 function pauseSong() {
-  musicContainer.classList.remove('play');
-  playBtn.querySelector('i.fas').classList.remove('fa-pause');
-  playBtn.querySelector('i.fas').classList.add('fa-play');
+  musicContainer.classList.remove("play");
+  playBtn.querySelector("i.fas").classList.remove("fa-pause");
+  playBtn.querySelector("i.fas").classList.add("fa-play");
 
   audio.pause();
 }
 
-
 // Event listeners
-playBtn.addEventListener('click', () => {
-  const isPlaying = musicContainer.classList.contains('play');
+playBtn.addEventListener("click", () => {
+  const isPlaying = musicContainer.classList.contains("play");
 
-  if(isPlaying) {
+  if (isPlaying) {
     pauseSong();
   } else {
     playSong();
   }
-})
+});
