@@ -58,7 +58,7 @@ body {
   animation-play-state: paused; /* starting and stopping animation */
 }
 .music-container.play .img-container img {
-  animation-play-state: running;
+  /*animation-play-state: running;*/
 }
 
 @keyframes rotate {
@@ -118,6 +118,21 @@ body {
   transform: translateY(-100%);
 }
 
+.progress-container {
+  background: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px 0;
+  height: 4px;
+  width: 100%;
+}
+.progress {
+  background-color: #fe8daa;
+  border-radius: 5px;
+  height: 100%;
+  width: 0%; /* this is to control the progress */
+  transition: width 0.1s linear;
+}
 
 
 
