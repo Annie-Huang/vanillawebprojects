@@ -14,3 +14,14 @@ const songs = ['hey', 'summer', 'ukulele'];
 // Keep track of songs
 let songIndex = 2;
 
+// Initially load song info DOM
+loadSong(songs[songIndex])
+
+// Update song details
+function loadSong(song) {
+  title.innerText = song;
+  audio.src = `music/${song}.mp3`;
+  cover.src = `images/${song}.jpg`;
+}
+
+
