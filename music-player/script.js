@@ -62,6 +62,15 @@ function nextSong() {
   playSong();
 }
 
+function updateProgress(e) {
+  // console.log(e.srcElement.currentTime);
+  // console.log(e.srcElement.duration); // return 146.416327. This is the total time duration for the song and it will not changed.
+
+  const { duration, currentTime } = e.srcElement;
+  const progressPercent = (currentTime / duration) * 100;
+  progress.style.width = `${progressPercent}%`;
+}
+
 // Event listeners
 playBtn.addEventListener("click", () => {
   const isPlaying = musicContainer.classList.contains("play");
@@ -76,3 +85,5 @@ playBtn.addEventListener("click", () => {
 // Change song events
 prevBtn.addEventListener("click", prevSong);
 nextBtn.addEventListener("click", nextSong);
+
+audio.addEventListener("timeupdate", updateProgress);
