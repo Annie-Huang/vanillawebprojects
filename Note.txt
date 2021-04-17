@@ -5,3 +5,4 @@ https://github.com/Annie-Huang/vanillawebprojects
 The hangman project is in (C:\react\hangman-react git:https://github.com/Annie-Huang/hangman-react)
 --------------------------------------------------------------------
 
+C:\react\vanillawebprojects>npm init -y
